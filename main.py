@@ -33,7 +33,7 @@ def get_sgf(sgfid:int):
 
 def modify_sgf(sgf_str):
     game = sgf.Sgf_game.from_string(sgf_str)
-    if game.get_komi == 375:
+    if game.get_komi() == 375:
         game.get_root().set('KM', '7.5')
     return game
 
